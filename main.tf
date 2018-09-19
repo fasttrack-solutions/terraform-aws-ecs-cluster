@@ -184,7 +184,7 @@ resource "aws_autoscaling_group" "container_instance" {
 
   tag {
     key                 = "Name"
-    value               = "ContainerInstance"
+    value               = "${title(var.project)}${title(var.environment)}ContainerInstance"
     propagate_at_launch = true
   }
 
